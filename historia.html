@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Seja bem vindo ao site!">
+    <meta name="author" content="Mariany, Vitória ">
+    <title>Delicious Coffee</title>
+    <link rel="shortcut icon" href="Delicious.png" type="favicon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .menu-toggle {
+
+            display: none;
+            float: right;
+            width: 40px;
+            height: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .autenticacao {
+                display: none;
+            }
+         
+        }
+
+
+        body {
+            background-color: beige;
+            height: 2000px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .cabecalho {
+            display: flex;
+            background-color: rgb(245, 238, 208);
+            width: 100%;
+            position: static;
+            padding-top: 10px;
+            margin-top: 0;
+            border-bottom: solid 5px rgb(151, 104, 83);
+            color: sienna;
+        }
+
+        .logo img {
+            width: 200px;
+            height: 80px;
+            display: inline-block;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .menu li {
+            width: 100px;
+            display: inline-block;
+            color: sienna;
+            margin-left: 15px;
+        }
+
+        .menu {
+            margin-top: 25px;
+        }
+
+        .autenticacao {
+            margin-left: auto;
+            margin-top: 25px;
+        }
+
+        a {
+            color: sienna;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .botao {
+            background-color: pink;
+            border: 1px;
+            border-radius: 40px;
+            padding: 5px 10px;
+
+        }
+
+        .cabecalho .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin-right: 10px;
+        }
+
+        .Login {
+            margin-left: 15px;
+            margin-right: 10px;
+        }
+
+        .menu a:hover {
+            color: rgb(247, 158, 173);
+        }
+
+        .autenticacao a:hover {
+            color: rgb(247, 158, 173);
+        }
+
+        h1 {
+            font-family: cursive;
+            color: sienna;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        main>p {
+            text-align: center;
+            font-size: 18px;
+            font-family: cursive;
+            color: rgb(151, 104, 83);
+
+        }
+
+        h2 {
+            font-family: cursive;
+            color: black;
+            text-align: center;
+
+        }
+
+        #carouselExampleCaptions {
+            margin-top: 90px;
+        }
+
+
+
+        footer {
+            background-color: sienna;
+            margin-top: 80px
+        }
+
+        footer .container {
+            display: flex;
+            position: relative;
+
+        }
+
+        footer .container ul {
+            width: 20%;
+        }
+
+        footer .container ul>p {
+            margin-bottom: 35px;
+
+        }
+
+        footer .container li {
+            margin: 10px 0;
+
+        }
+
+        .cor {
+            color: white;
+        }
+
+        li {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+
+        h3 {
+            color: black;
+            margin-top: 20px;
+        }
+
+        a>img {
+            width: 30px;
+
+        }
+        .cafezinho{
+          padding: 100px; 
+          padding-left: 350px;
+        }
+
+        @media(max-width:1000px) {
+            .Login {
+                padding: 10px;
+                display: inline;
+            }
+
+            .botao {
+                display: inline-block;
+                border: 1px;
+                border-radius: 10px;
+
+
+            }
+        }
+
+        @media(max-width: 700px) {
+
+            .linhas {
+                display: grid;
+
+
+            }
+
+            footer {
+
+                height: 950px;
+
+
+            }
+
+            footer .container {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            footer .container ul,
+            li {
+
+                width: 50%;
+                margin-bottom: 20px;
+                position: static;
+
+            }
+
+            .diminuir {
+                margin-left: 0;
+            }
+            h1 {
+            font-family: cursive;
+            color: sienna;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+   
+
+            main>p{
+            font-size: 15px;
+            text-align: center;
+            font-family: cursive;
+            color: rgb(151, 104, 83);
+          }
+
+          .cafezinho{
+            display: flex;
+           padding-left: 0%;
+            margin-left: 10px;
+            width: 450px;
+            
+          }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="Banner.png" alt="Logo" />
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+
+
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <li>
+                    <a href="tabela.html">Cardápio</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+                <li>
+                    <a href="historia.html">História</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="login.html" class="Login">Login</a>
+            <a href="formulario.html" class="botao destaque">Cadastre-se</a>
+        </aside>
+    </header>
+    <main>
+        <h1>Nossa História</h1>
+
+        <p> <br> Era uma vez, em uma pequena cidadezinha chamada Monte Belo, uma charmosa cafeteria chamada "Delicia de
+            café". Essa cafeteria não era apenas um lugar para tomar café; era um refúgio acolhedor onde as histórias se
+            entrelaçavam com o aroma do café recém-moído. <br> </p>
+        <p><br>Tudo começou há muitas décadas, quando Margarida, uma jovem apaixonada por café, decidiu abrir sua
+            própria cafeteria. Com uma pequena herança de seus avós e uma receita secreta de café passada de geração em
+            geração, Margarida transformou um modesto espaço numa encantadora cafeteria. Ela chamou-a de "Delicia de
+            café", um nome que ressoaria por muitas décadas.<br></p>
+        <p><br>Margarida era uma mulher trabalhadora e apaixonada, e seu café logo se tornou famoso na cidade. Seu
+            filho,
+            Henri, cresceu entre os aromas de grãos de café torrando e risadas de clientes satisfeitos. Ele aprendeu os
+            segredos do café e o valor da hospitalidade desde muito jovem.<br></p>
+        <p><br>Quando Henri cresceu, ele assumiu a cafeteria de sua mãe. Ele trouxe novas ideias, introduziu novos
+            sabores de café e expandiu o menu para incluir deliciosos acompanhamentos feitos em casa. Sob sua gestão, o
+            Café Familiar floresceu ainda mais, tornando-se um ponto de encontro popular para a comunidade local.<br>
+        </p>
+        <p><br>Henri casou-se com Isabelle, uma talentosa confeiteira que trouxe seu toque especial à cafeteria. Juntos,
+            eles criaram uma atmosfera calorosa e acolhedora, onde clientes se sentiam em casa. Isabelle também
+            acrescentou à ementa uma variedade de bolos, tortas e doces que rapidamente se tornaram a marca registrada
+            do Café Familiar.<br></p>
+        <p><br>Os anos passaram, e Henri e Isabelle passaram a gerência para sua filha mais velha, Amélie. Ela cresceu
+            observando o amor e a dedicação de seus pais à cafeteria. Amélie, por sua vez, trouxe uma abordagem moderna
+            à gestão, incorporando métodos sustentáveis e promovendo eventos comunitários. <br>
+            Agora, a quarta geração da família estava pronta para assumir. Sophie, filha de Amélie, era uma jovem
+            talentosa e cheia de ideias inovadoras. Ela manteve a tradição familiar, mas também introduziu novos
+            conceitos, como cafés especiais e eventos culturais. O Café Familiar tornou-se uma mistura perfeita de
+            tradição e modernidade.<br></p>
+        <p><br>Com os tempos mudados Amélie resolveu trocar o nome do café para "Delicious coffee", deixando-o com cara
+            de mais moderno e sofisticado, e desde então o café continua a fazer um grande sucesso na cidade .</p>
+        <img class="cafezinho" src="coffee.webp" alt="">
+    </main>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Café antigo.jfif" class="d-block w-100" alt="..." width="800" height="500">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Início da loja</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="café antigo2.jpg" class="d-block w-100" alt="..." width="800" height="500">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Henri e seus amigos</h5>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="cafeteria.jpg" class="d-block w-100" alt="..." width="800" height="500">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Cafeteria na atualidade</h5>
+                </div>
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <footer style="background-color: sienna; ">
+        <div id="contato"></div>
+        <div class="container">
+            <ul>
+                <h3>Redes sociais </h3>
+                <p class="cor">Entrem e nossos perfis tanto do facebook, tanto do instagram e vejam a novidades.</p>
+                <div>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938052.png" alt=""
+                            class="imagem"></a>
+
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt=""
+                            class="imagem"></a>
+                </div>
+            </ul>
+            <ul style="margin-left: 60px;">
+                <h3>Links</h3>
+                <li>
+                    <a href="index.html" class="cor">Início</a>
+                </li>
+                <li>
+                    <a href="tabela.html" class="cor">Cardápio</a>
+                </li>
+
+                <li>
+                    <a href="historia.html" class="cor">História</a>
+                </li>
+            </ul>
+            <ul>
+
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="cor">FAQ</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Caracteristicas</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Como funciona</a>
+                </li>
+
+
+            </ul>
+            <ul>
+                <h3>Nos contate</h3>
+                <li class="cor">35 99526932</li>
+
+                <li class="cor">Coffedelicious@gmail.com</li>
+            </ul>
+
+        </div>
+
+
+
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

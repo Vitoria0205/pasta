@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Seja bem vindo ao site!">
+    <meta name="author" content="Mariany, Vitória ">
+    <title>Delicious Coffee</title>
+    <link rel="shortcut icon" href="Delicious.png" type="favicon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .menu-toggle {
+
+            display: none;
+            float: right;
+            width: 40px;
+            height: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+            .autenticacao {
+                display: none ;
+            }
+            
+        }
+        
+        header {
+            grid-area: cabecalho;
+        }
+
+        main {
+            grid-area: conteudo;
+        }
+
+        footer {
+            grid-area: rodape;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 70% 1fr;
+            grid-template-rows: 100px 1fr 250px;
+            grid-template-areas:
+                'cabecalho cabecalho '
+                ' conteudo conteudo'
+                'rodape rodape';
+
+        }
+
+        @media(max-width: 700px) {
+            body {
+                grid-template-columns: 800px 800px 800px;
+                grid-template-rows: 100px 1fr 160px;
+                grid-template-areas:
+                    'cabecalho'
+                    'conteudo'
+                    'rodape';
+            }
+
+        }
+
+        main {
+            background-color: beige;
+            height: 3000px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: grid;
+
+
+
+
+
+        }
+
+        .cabecalho {
+            display: flex;
+            background-color: rgb(245, 238, 208);
+            width: 100%;
+            position: sticky;
+            padding-top: 10px;
+            border-bottom: solid 5px rgb(151, 104, 83);
+            color: sienna;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            width: 200px;
+            height: 80px;
+            display: inline-block;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .menu li {
+            width: 100px;
+            display: inline-block;
+            color: sienna;
+            margin-left: 15px;
+        }
+
+        .menu {
+            margin-top: 25px;
+        }
+
+        .autenticacao {
+            margin-left: auto;
+            margin-top: 25px;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: sienna;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .botao {
+            background-color: pink;
+            border: 1px;
+            border-radius: 40px;
+            padding: 5px 10px;
+
+        }
+
+        .cabecalho .botao {
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin-right: 10px;
+        }
+
+        .Login {
+            margin-left: 15px;
+            margin-right: 10px;
+        }
+
+        @media(max-width:1000px){
+        .Login{
+            padding: 10px;
+            display:inline;
+        }
+        
+        .botao{
+             display: inline-block;
+             border: 1px;
+            border-radius: 10px;
+            
+
+            }
+            }
+
+        .menu a:hover {
+            color: rgb(247, 158, 173);
+        }
+
+        .autenticacao a:hover {
+            color: rgb(247, 158, 173);
+        }
+
+
+        #imagem {
+
+            background-color: beige;
+            margin-top: 650px;
+            display: flex;
+            align-content: center;
+            align-items: stretch;
+            box-sizing: border-box;
+            position: static;
+            z-index: -1;
+
+        }
+
+        body {
+            box-sizing: border-box;
+
+
+        }
+
+        .b>h1 {
+            font-size: 60px;
+            color: white;
+        }
+
+        .b>p {
+            font-size: 40px;
+        }
+
+        .b {
+            background-color: sienna;
+            border: 1px black solid;
+            box-sizing: border-box;
+            width: 98.5vw;
+            height: 600px;
+            position: static;
+
+
+
+
+
+
+        }
+
+        .b .caneca {
+
+            width: 400px;
+            align-items: left;
+            margin-top: 100px;
+            margin-right: 180px;
+            padding: 0;
+
+
+
+
+        }
+
+        .caneca {
+            float: right;
+            
+
+        }
+       
+
+        @media(max-width: 700px) {
+            .comeco {
+                width: 50%;
+                justify-content: left;
+                height: 200px;
+            }
+
+            .b>h1 {
+                font-size: 40px;
+            }
+            .b>p {
+                font-size: 20px;
+            }
+            .b .caneca{
+                width: 300px;
+                align-items: left;
+            margin-top: 40px;
+            margin-right: 60px;
+            padding: 0;
+
+            }
+
+        }
+
+        main {
+            box-sizing: border-box;
+        }
+
+        div>h1 {
+            margin-top: 18%;
+            margin-left: 50px;
+            display: inline-block;
+        }
+
+        div>p {
+            margin-left: 50px;
+            display: block;
+
+        }
+
+        .card>h1 {
+            margin-top: 100px;
+            color: white;
+            margin-left: 0;
+        }
+
+        .card>p {
+            color: white;
+
+            margin-left: 0;
+
+        }
+
+        .botaozinho {
+            color: white;
+            background-color: rgb(129, 126, 126);
+            font-size: 15px;
+            border: 1px;
+            padding: 5px 10px;
+            float: right;
+            margin-top: 10px;
+
+
+        }
+
+        .conhecer {
+
+            display: inline-block;
+            margin-left: 130px;
+            margin-top: 0;
+            box-sizing: border-box;
+
+
+        }
+
+        .card {
+            border: solid 1px #ccc;
+            box-shadow: 0 4px 20px 0;
+            padding: 30px;
+            margin: 10px;
+            width: 350px;
+            height: 350px;
+            display: inline-block;
+
+        }
+
+        .sobre {
+            background-image: url(https://conteudo.imguol.com.br/c/entretenimento/ac/2020/08/14/cafe-especial-1597429133880_v2_450x450.jpg);
+
+
+
+
+        }
+
+        .sobre1 {
+            background-image: url(https://www.mexidodeideias.com.br/wp-content/uploads/2010/07/PEDECAFE02_para-o-Mexido.jpg);
+
+
+
+        }
+
+        @media(max-width: 700px) {
+            .conhecer {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+        }
+
+        footer {
+            background-color: sienna;
+            box-sizing: border-box;
+
+
+
+        }
+
+        footer .container {
+            display: flex;
+            position: sticky;
+
+        }
+
+        footer .container .linhas {
+            width: 20%;
+            margin-left: 50px;
+        }
+
+        footer .container ul>p {
+            margin-bottom: 35px;
+            margin: 20px 20px;
+        }
+        footer .container ul>p {
+            margin-bottom: 35px;
+            margin: 20px 20px;
+        }
+      
+
+        footer .container li {
+            margin: 20px 20px;
+
+        }
+
+        .cor {
+            color: white;
+        }
+        footer .container ul {
+            margin-left: 0px;
+        }
+
+        li {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+
+        h3 {
+            font-size: 30px;
+            color: black;
+            margin-top: 20px;
+            margin: 20px 20px;
+        }
+
+        a>img {
+            width: 30px;
+
+
+
+        }
+
+
+        @media(max-width: 700px) {
+
+            iframe {
+                width: 400px;
+                height: 200px;
+                float: left;
+            }
+
+            .video {
+                float: left;
+            }
+
+            footer {
+
+                height: 950px;
+
+                
+            }
+
+            footer .container {
+                display: flex;
+                flex-direction: column;
+               
+            }
+
+            footer .container ul,
+            li {
+                
+                width: 50%;
+                margin-bottom: 20px;
+                
+            }
+            .diminuir{
+            margin-left: 0;
+            }
+        }
+
+        .video {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: sienna;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="Banner.png" alt="Logo" />
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+
+
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <li>
+                    <a href="tabela.html">Cardápio</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+                <li>
+                    <a href="historia.html">História</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="login.html" class="Login">Login</a>
+            <a href="formulario.html" class="botao destaque">Cadastre-se</a>
+        </aside>
+    </header>
+
+
+    <main>
+        <aside id="comeco">
+            <div class="b">
+                <h1>Delicious Coffee </h1><img src="caneca.png" alt="" width="500px" class="caneca">
+                <p>o Café a seu caminho </p>
+
+            </div>
+
+        </aside>
+        <aside>
+            <div class="video">
+                <iframe width="1100px" height="480px" src="https://www.youtube.com/embed/6KPc2xxcFNw"
+                    title="Coffee Solo B-roll | Cinematic Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+        </aside>
+        <aside style="background-color: beige ;">
+            <div class="conhecer">
+                <div class=" card sobre">
+                    <h1>Café com torrada</h1>
+                    <p>Venha experimentar nosso Cardápio</p>
+                    <a href="tabela.html"><button class="botaozinho">Comprar</button></a>
+                </div>
+                <div class="conhecer">
+                    <div class="card sobre1">
+                        <h1>Mundo do Café</h1>
+                        <p>Venha econhecer nossa historia</p>
+                        <a href="historia.html"><button class="botaozinho">Conhecer mais </button></a>
+
+                    </div>
+                </div>
+        </aside>
+
+
+
+
+
+
+
+    </main>
+
+
+
+    <footer style="background-color: sienna; ">
+        <div id="contato"></div>
+        <div class="container">
+            <ul class="linhas">
+                <h3>Redes sociais </h3>
+                <p class="cor">Entrem e nossos perfis tanto do facebook, tanto do instagram e vejam a novidades.</p>
+                <div>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938052.png" alt="" class="imagem"
+                            style="  margin-left: 20px;"></a>
+
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt=""
+                            class="imagem"></a>
+                </div>
+            </ul>
+            <ul class="linhas"> 
+                <h3>Links</h3>
+                <li>
+                    <a href="index.html" class="cor">Início</a>
+                </li>
+                <li>
+                    <a href="tabela.html" class="cor">Cardápio</a>
+                </li>
+                
+                <li>
+                    <a href="historia.html" class="cor">História</a>
+                </li>
+            </ul>
+            <ul class="linhas">
+
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="cor">FAQ</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Caracteristicas</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Como funciona</a>
+                </li>
+
+
+            </ul>
+            <ul class="linhas">
+                <h3>Nos contate</h3>
+                <li class="cor">35 99526932</li>
+
+                <li class="cor">Coffedelicious@gmail.com</li>
+            </ul>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+
+</html>

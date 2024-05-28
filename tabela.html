@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cadastre-se!">
+    <meta name="author" content="Mariany, Vitória ">
+    <title>Delicious Coffee</title>
+    <link rel="shortcut icon" href="Delicious.png" type="favicon">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .menu-toggle {
+
+            display: none;
+            float: right;
+            width: 40px;
+            height: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .autenticacao {
+                display: none;
+            }
+
+        }
+
+        body {
+            height: 2000px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: beige;
+        }
+
+        .cabecalho {
+            display: flex;
+            background-color: rgb(245, 238, 208);
+            width: 100%;
+            position: static;
+            padding-top: 10px;
+            border-bottom: solid 5px rgb(151, 104, 83);
+            color: sienna;
+        }
+
+        .logo img {
+            width: 200px;
+            height: 80px;
+            display: inline-block;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .menu li {
+            width: 100px;
+            display: inline-block;
+            color: sienna;
+            margin-left: 15px;
+        }
+
+        .menu {
+            margin-top: 25px;
+        }
+
+        .autenticacao {
+            margin-left: auto;
+            margin-top: 25px;
+
+        }
+
+        a {
+            color: sienna;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .botao {
+            background-color: pink;
+            border: 1px;
+            border-radius: 40px;
+            padding: 5px 10px;
+
+        }
+
+        .cabecalho .botao {
+            border-radius: 30px;
+
+            padding: 10px 25px;
+            margin-right: 10px;
+        }
+
+        .Login {
+            margin-left: 15px;
+            margin-right: 10px;
+        }
+
+        .menu a:hover {
+            color: rgb(247, 158, 173);
+        }
+
+        .autenticacao a:hover {
+            color: rgb(247, 158, 173);
+
+        }
+
+        footer {
+            background-color: sienna;
+            margin-top: 900px
+        }
+
+        footer .container {
+            display: flex;
+            position: sticky;
+
+        }
+
+        footer .container ul {
+            width: 20%;
+            margin-left: 0px;
+        }
+        footer .container .linhas {
+            width: 20%;
+            margin-left: 50px;
+        }
+        footer .container ul>p {
+            margin-bottom: 35px;
+
+        }
+
+        footer .container li {
+            margin: 10px 0;
+
+        }
+
+        .cor {
+            color: white;
+        }
+
+        li {
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+
+        h3 {
+            color: black;
+            margin-top: 20px;
+        }
+
+        a>img {
+            width: 30px;
+
+        }
+
+        a {
+            color: sienna;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+
+    
+
+
+
+
+        @media(max-width:1000px) {
+            .Login {
+                padding: 10px;
+                display: inline;
+            }
+
+            .botao {
+                display: inline-block;
+                border: 1px;
+                border-radius: 10px;
+
+
+            }
+        }
+
+        @media(max-width: 700px) {
+
+            .linhas {
+          display: grid;
+            
+
+        }
+
+            footer {
+
+                height: 950px;
+
+
+            }
+
+            footer .container {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            footer .container ul,
+            li {
+
+                width: 50%;
+                margin-bottom: 20px;
+                position: static;
+
+            }
+
+            .diminuir {
+                margin-left: 0;
+            }
+        
+            }
+          
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="Banner.png" alt="Logo" />
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+
+
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <li>
+                    <a href="tabela.html">Cardápio</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+                <li>
+                    <a href="historia.html">História</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="login.html" class="Login">Login</a>
+            <a href="formulario.html" class="botao destaque">Cadastre-se</a>
+        </aside>
+        </aside>
+    </header>
+    <main class="container-fluid">
+        <h1 class="text-center mt-3 mb-2 ">Bebidas</h1>
+        <table class="table table-warning table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>Ingredientes</th>
+                    <th>Preço</th>
+                    <th class="text-center">Fazer o pedido</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+
+                    <td>Latte Macchiato</td>
+                    <td>Café expresso, leite e açúcar</td>
+                    <td>R$15,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Café expresso</td>
+                    <td>Café moído do IF </td>
+                    <td>R$6,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Capuccino</td>
+                    <td>Leite com espuma com café espresso</td>
+                    <td>R$8,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Café gelado</td>
+                    <td>Café, gelo e caramelo</td>
+                    <td>R$9,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sucos</td>
+                    <td>Morango, Laranja, Limão, Abacaxi, Maracujá <br> opcional: gelo </td>
+                    <td>R$8,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1 class="text-center mt-3 mb-2 ">Comidas</h1>
+        <table class="table table-warning table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>nome</th>
+                    <th>Ingredientes</th>
+                    <th>Preço</th>
+                    <th class="text-center">Fazer o pedido</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+
+                    <td>Baguete</td>
+                    <td>Farinha, água, oléo, sal, fermento biologico</td>
+                    <td>R$5,00 (KG)</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Croissant</td>
+                    <td> farinha de trigo, ovos, água, manteiga, fermento, acúçar e sal </td>
+                    <td>R$8,00 (Unid)</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nuvem</td>
+                    <td>Leite ninho, farinha, fermento, nutella, acúçcar ovos</td>
+                    <td>R$20,00 (KG)</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Bolos de Pote</td>
+                    <td>ninho trufado, Leite ninho, doce de leite, brigadeiro </td>
+                    <td>R$9,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salgados</td>
+                    <td>Assados ou fritos </td>
+                    <td>R$7,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tortas</td>
+                    <td>Maracujá, Morango e limão </td>
+                    <td>R$9,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salgados</td>
+                    <td>Assados ou fritos </td>
+                    <td>R$7,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carolina</td>
+                    <td>Água, manteiga, sal, farinha de trigo, ovos </td>
+                    <td>R$20,00</td>
+                    <td class="text-center">
+                        <a href="" class="btn btn-danger">Comprar</a>
+                    </td>
+                </tr>
+                <td>Rosca ao creme</td>
+                <td>Água, manteiga, sal, farinha de trigo, ovos, fermento fresco, leite, açucar. <br>
+                    recheio: maisena, leite, leite condensado, gema, essência de baunilha.
+                </td>
+                <td>
+                    <R125></R125>,00
+                </td>
+                <td class="text-center">
+                    <a href="" class="btn btn-danger">Comprar</a>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer style="background-color: sienna; ">
+        <div id="contato"></div>
+        <div class="container">
+            <ul>
+                <h3>Redes sociais </h3>
+                <p class="cor">Entrem e nossos perfis tanto do facebook, tanto do instagram e vejam a novidades.</p>
+                <div>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938052.png" alt=""
+                            class="imagem"></a>
+
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/256/20/20673.png" alt=""
+                            class="imagem"></a>
+                </div>
+            </ul>
+            <ul style="margin-left: 60px;" id="Links">
+                <h3>Links</h3>
+                <li>
+                    <a href="index.html" class="cor">Início</a>
+                </li>
+                <li>
+                    <a href="tabela.html" class="cor">Cardápio</a>
+                </li>
+
+                <li>
+                    <a href="historia.html" class="cor">História</a>
+                </li>
+            </ul>
+            <ul>
+
+                <h3>Suporte</h3>
+                <li>
+                    <a href="#" class="cor">FAQ</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Caracteristicas</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="cor">Como funciona</a>
+                </li>
+
+
+            </ul>
+            <ul>
+                <h3>Nos contate</h3>
+                <li class="cor">35 99526932</li>
+
+                <li class="cor">Coffedelicious@gmail.com</li>
+            </ul>
+
+        </div>
+
+
+
+
+    </footer>
+
+</body>
+
+</html>
